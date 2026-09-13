@@ -148,7 +148,9 @@ AI environment demo started
 
 ### 5.3 对应 2.3：Git 与 GitHub/Gitee
 
-- 本地仓库地址：`D:\work\ai`（当前未设置 GitHub/Gitee 远程地址）。
+- 本地仓库地址：`D:\work\ai`。
+- GitHub 远程仓库地址：<https://github.com/yet-yet/ai-env-experiment>。
+- 已执行 `git remote add origin https://github.com/yet-yet/ai-env-experiment.git` 完成远程绑定；本次终端到 GitHub 的 443 端口连接失败，推送待网络恢复后执行。
 - 默认分支：`main`。
 - 首次提交：`c4fe936 chore: add reproducible AI environment demo`。
 - 第二次提交：`42d2f5a docs: record environment acceptance result`。
@@ -192,7 +194,7 @@ AI environment demo started
 |---|---|---|
 | 项目可启动 | 通过 | `npm start` 输出环境摘要 |
 | Git 可提交 | 通过 | 已有两个提交，默认分支 `main` |
-| Git 可推送 | 待配置 | 未绑定 GitHub/Gitee 远程地址；配置账号和 remote 后执行 `git push -u origin main` |
+| Git 可推送 | 待完成 | 已绑定 `origin`，但当前终端无法连接 GitHub；网络恢复后执行 `git push -u origin main` |
 | 两种 AI 工具可响应 | 通过 | Codex CLI 与 Claude Code 均返回同题结果 |
 | 模型 API 可调用 | 通过 | 两次云端文本调用均完成 |
 | AI 协作记录可查看 | 通过 | [AI协作记录.md](AI协作记录.md) |
@@ -205,6 +207,6 @@ AI environment demo started
 
 本次已完成 Windows 11、VS Code、Node.js、npm、Git、Codex CLI、Claude Code 和一个可运行 Node.js 最小项目的配置与验证。项目包含锁定文件、测试、环境检查脚本、密钥模板、`.gitignore`、README 和 MIT 许可证，能够支持继续开发个人软件。
 
-仍未完成的事项只有 GitHub/Gitee 远程仓库推送、云服务免费额度提醒和 Ollama 本地模型配置，这些步骤依赖个人账号或额外下载。当前本地提交和模型调用已经通过，后续绑定远程仓库后即可补做推送验收。
+仍未完成的事项是 GitHub/Gitee 远程仓库首次推送、云服务免费额度提醒和 Ollama 本地模型配置。远程仓库已经创建并绑定，但当前终端到 GitHub 的 443 端口连接失败；网络恢复后执行 `git push -u origin main` 即可补做推送验收。当前本地提交和模型调用已经通过。
 
 本次实际问题是 Windows ESM 路径格式不一致。将 `import.meta.url` 通过 `fileURLToPath()` 转换后，`npm start` 能输出完整摘要，`npm test` 保持 1 项通过；修复过程和验证结果已记录在 5.2。
