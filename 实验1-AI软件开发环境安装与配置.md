@@ -196,6 +196,8 @@ AI environment demo started
 | 仓库无明文密钥 | 通过 | `.env` 被忽略，源码只输出设置状态和长度 |
 | 关闭并重新打开后可复现 | 通过 | 重新执行 `npm install`、`npm test`、`npm start` 的命令已写入 README；项目无第三方运行时依赖 |
 
+复现验证实际使用了 `git clone --no-local D:\work\ai <临时目录>`，随后在新目录执行 `npm install`、`npm test` 和 `npm start`，结果与原目录一致。直接使用 Git 的 `--local` 模式时，Windows 临时目录不支持创建硬链接，因此改用 `--no-local` 完成复制。
+
 ## 6. 实验小结
 
 本次已完成 Windows 11、VS Code、Node.js、npm、Git、Codex CLI、Claude Code 和一个可运行 Node.js 最小项目的配置与验证。项目包含锁定文件、测试、环境检查脚本、密钥模板、`.gitignore`、README 和 MIT 许可证，能够支持继续开发个人软件。
