@@ -150,14 +150,18 @@ AI environment demo started
 
 - 本地仓库地址：`D:\work\ai`。
 - GitHub 远程仓库地址：<https://github.com/yet-yet/ai-env-experiment>。
-- 已执行 `git remote add origin https://github.com/yet-yet/ai-env-experiment.git` 完成远程绑定；本次终端到 GitHub 的 443 端口连接失败，推送待网络恢复后执行。
+- GitHub 仓库已经创建，但本次按提交安排不上传代码，取消远程推送；截图见图1。
 - 默认分支：`main`。
 - 首次提交：`c4fe936 chore: add reproducible AI environment demo`。
 - 第二次提交：`42d2f5a docs: record environment acceptance result`。
 - 关键命令：`git init -b main`、`git add`、`git commit`、`git log --oneline --decorate`、`git status --short`。
 - 提交规范：功能或修复使用 `feat:` / `fix:`，文档和环境记录使用 `docs:` / `chore:`；后续开发从 `main` 创建主题分支，合并前运行测试。
 
-第二次提交只修改了 `ai-env-demo/README.md`，增加了 2026-09-13 的环境验收结果。提交历史因此能直接显示 README 的变化。
+第二次提交只修改了 `ai-env-demo/README.md`，增加了 2026-09-13 的环境验收结果。提交历史因此能直接显示 README 的变化。图1为 GitHub 仓库创建页面截图，证明仓库名称、所有者和公开状态已设置；页面仍显示 Quick setup，说明代码未上传。
+
+**图1 GitHub 仓库创建页面截图**
+
+![图1 GitHub 仓库创建页面截图](素材/图1-GitHub仓库创建截图.png)
 
 ### 5.4 对应 2.4：AI 开发工具安装与接入
 
@@ -194,7 +198,8 @@ AI environment demo started
 |---|---|---|
 | 项目可启动 | 通过 | `npm start` 输出环境摘要 |
 | Git 可提交 | 通过 | 已有两个提交，默认分支 `main` |
-| Git 可推送 | 待完成 | 已绑定 `origin`，但当前终端无法连接 GitHub；网络恢复后执行 `git push -u origin main` |
+| GitHub 仓库创建 | 通过 | 已创建 `yet-yet/ai-env-experiment`，截图见图1 |
+| Git 代码推送 | 已取消 | 本次直接使用仓库创建截图作为证据，不上传本地代码 |
 | 两种 AI 工具可响应 | 通过 | Codex CLI 与 Claude Code 均返回同题结果 |
 | 模型 API 可调用 | 通过 | 两次云端文本调用均完成 |
 | AI 协作记录可查看 | 通过 | [AI协作记录.md](AI协作记录.md) |
@@ -207,6 +212,6 @@ AI environment demo started
 
 本次已完成 Windows 11、VS Code、Node.js、npm、Git、Codex CLI、Claude Code 和一个可运行 Node.js 最小项目的配置与验证。项目包含锁定文件、测试、环境检查脚本、密钥模板、`.gitignore`、README 和 MIT 许可证，能够支持继续开发个人软件。
 
-仍未完成的事项是 GitHub/Gitee 远程仓库首次推送、云服务免费额度提醒和 Ollama 本地模型配置。远程仓库已经创建并绑定，但当前终端到 GitHub 的 443 端口连接失败；网络恢复后执行 `git push -u origin main` 即可补做推送验收。当前本地提交和模型调用已经通过。
+仍未完成的事项是 GitHub/Gitee 远程仓库代码推送、云服务免费额度提醒和 Ollama 本地模型配置。本次按要求取消代码推送，使用图1证明远程仓库已经创建；当前本地提交和模型调用已经通过。
 
 本次实际问题是 Windows ESM 路径格式不一致。将 `import.meta.url` 通过 `fileURLToPath()` 转换后，`npm start` 能输出完整摘要，`npm test` 保持 1 项通过；修复过程和验证结果已记录在 5.2。
