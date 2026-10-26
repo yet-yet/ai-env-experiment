@@ -1,0 +1,40 @@
+[
+  {
+    "case": "timeout",
+    "ok": false,
+    "code": "TIMEOUT",
+    "message": "请求超过 800 ms 未返回，已中止",
+    "detail": {
+      "latencyMs": 815.1566,
+      "message": "请求超过 800 ms 未返回，已中止",
+      "code": "TIMEOUT"
+    },
+    "attempts": 1
+  },
+  {
+    "case": "network",
+    "ok": false,
+    "code": "NETWORK",
+    "message": "网络请求失败：fetch failed",
+    "detail": {
+      "latencyMs": 0.9302,
+      "cause": "Error: bad port",
+      "message": "网络请求失败：fetch failed",
+      "code": "NETWORK"
+    },
+    "attempts": 1
+  },
+  {
+    "case": "auth",
+    "ok": false,
+    "code": "AUTH",
+    "message": "接口返回 401：API Key 无效，请检查后重试。 原因：当前请求使用的 API Key 无效、已删除、已禁用或格式不正确。 解决方案：请检查 Authorization 是否为 Bearer 格式，并在控制台重新复制有效令牌。 request_id: 202610261414549280451138268d9d6y3tqiMgl",
+    "detail": {
+      "status": 401,
+      "latencyMs": 667.3588,
+      "message": "接口返回 401：API Key 无效，请检查后重试。 原因：当前请求使用的 API Key 无效、已删除、已禁用或格式不正确。 解决方案：请检查 Authorization 是否为 Bearer 格式，并在控制台重新复制有效令牌。 request_id: 202610261414549280451138268d9d6y3tqiMgl",
+      "code": "AUTH"
+    },
+    "attempts": 1
+  }
+]

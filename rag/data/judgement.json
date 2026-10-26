@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "judgedAt": "2026-10-26",
+  "judgedBy": "蔡春阳（人工阅读 rag/runs/eval-readable.txt 后逐题判定）",
+  "levels": ["完全正确", "部分正确", "错误", "未作答"],
+  "note": "判定依据 questions.json 中运行前写定的规则；每题的原始回答保存在 runs/eval-latest.json，未做删改。",
+  "items": {
+    "Q1": {
+      "direct": { "level": "错误", "missing": ["五个年龄档", "各档推荐内容"], "unsupported": ["“通常不做细分年龄段”", "3—6/6—12/12—15/15—18 四档划分"] },
+      "rag": { "level": "完全正确", "missing": [], "unsupported": [] },
+      "note": "直接组用平台通行做法替代了指南规定的五档；RAG 组五档与内容类别均与原文一致。"
+    },
+    "Q2": {
+      "direct": { "level": "错误", "missing": ["1 小时", "30 分钟"], "unsupported": ["40 分钟", "20 分钟"] },
+      "rag": { "level": "完全正确", "missing": [], "unsupported": [] },
+      "note": "直接组两个数字都编错，且自己声明“未核实原文”。"
+    },
+    "Q3": {
+      "direct": { "level": "部分正确", "missing": ["“默认”与“家长豁免”的关系", "青盾一侧的具体约束"], "unsupported": ["把 22—6 时说成“必须强制执行”"] },
+      "rag": { "level": "部分正确", "missing": ["青盾采用自定时段需满足的前提（回答声明资料未说明）"], "unsupported": [] },
+      "note": "两组都只覆盖部分要点；RAG 组把“资料没写”如实说出来，没有补完。"
+    },
+    "Q4": {
+      "direct": { "level": "完全正确", "missing": ["“属于敏感个人信息”这一属性"], "unsupported": [] },
+      "rag": { "level": "部分正确", "missing": ["告知必要性与对个人权益的影响", "最小必要原则"], "unsupported": ["“取得孩子本人的单独同意”表述易误读"] },
+      "note": "直接组凭内部知识答对了要点（虽无条号）；RAG 组只用了 1 个片段，未召回 K4 的儿童专门规则。"
+    },
+    "Q5": {
+      "direct": { "level": "未作答", "missing": ["三档可见范围"], "unsupported": [] },
+      "rag": { "level": "部分正确", "missing": ["可见≠可追溯"], "unsupported": [] },
+      "note": "直接组明确表示答不了并追问，属不编造；RAG 组三档齐全但漏掉配套约束。"
+    },
+    "Q6": {
+      "direct": { "level": "未作答", "missing": ["触发条件", "通知方式", "去重规则"], "unsupported": [] },
+      "rag": { "level": "完全正确", "missing": [], "unsupported": [] },
+      "note": "直接组没有编造青盾内部规则（正确行为）；RAG 组 8 类触发、通知与去重全部正确。"
+    },
+    "Q7": {
+      "direct": { "level": "部分正确", "missing": ["资料中没有该项信息这一判断依据"], "unsupported": ["声称“在 App Store 中未检索到”，但并未真正检索"] },
+      "rag": { "level": "完全正确", "missing": [], "unsupported": [] },
+      "note": "两组的正确行为都是不给日期和链接；RAG 组明确说明知识库未覆盖。"
+    },
+    "Q8": {
+      "direct": { "level": "部分正确", "missing": ["“具体种类由网信部门会同有关部门确定”"], "unsupported": ["称《未成年人网络保护条例》第二十四条“列举了九类”，条号与内容不符"] },
+      "rag": { "level": "完全正确", "missing": [], "unsupported": [] },
+      "note": "RAG 组指出资料未给现成清单，并说明该清单由部门另行确定，没有自造清单。"
+    }
+  }
+}

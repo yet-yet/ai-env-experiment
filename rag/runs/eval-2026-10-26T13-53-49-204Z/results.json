@@ -1,0 +1,1898 @@
+{
+  "generatedAt": "2026-10-26T13:57:48.310Z",
+  "summary": {
+    "questions": 8,
+    "model": "claude-opus-5-5",
+    "topK": 4,
+    "useRerank": true,
+    "direct": {
+      "okCount": 8,
+      "totalCalls": 8,
+      "totalTokens": 7244,
+      "inputTokens": 2682,
+      "outputTokens": 4562,
+      "avgLatencyMs": 15801
+    },
+    "rag": {
+      "okCount": 8,
+      "insufficientCount": 2,
+      "totalCalls": 14,
+      "totalTokens": 3321,
+      "inputTokens": 24,
+      "outputTokens": 3297,
+      "avgLatencyMs": 14087,
+      "avgRetrieveMs": 1,
+      "avgRerankMs": 3757,
+      "avgGenerateMs": 10324,
+      "withInvalidCitation": 0,
+      "withCitation": 5
+    }
+  },
+  "results": [
+    {
+      "id": "Q1",
+      "type": "单片段可回答",
+      "question": "未成年人模式把未成年人分成哪几个年龄段？每个年龄段推荐什么内容？",
+      "expect": {
+        "mustCover": [
+          "不满3周岁",
+          "3周岁以上不满8周岁",
+          "8周岁以上不满12周岁",
+          "12周岁以上不满16周岁",
+          "16周岁以上不满18周岁",
+          "各档推荐内容类别"
+        ],
+        "sourceHint": "K1-C 应用程序·推荐适龄内容",
+        "rule": "五档年龄区间全部正确且各档内容类别与原文一致记“完全正确”；缺 1 档或合并档位记“部分正确”；档位边界写错（如 8—12 写成 6—12）记“错误”。"
+      },
+      "direct": {
+        "ok": true,
+        "answer": "**结论：**\n未成年人模式通常将未成年人分为3-4个年龄段：学龄前（3-6岁）、小学阶段（6-12岁）、初中阶段（12-14岁）和高中阶段（14-18岁）。各年龄段推荐内容遵循\"由浅入深、由趣味到知识\"的原则：学龄前以动画、儿歌、启蒙教育为主；小学阶段增加科普、兴趣培养类内容；初中阶段引入新闻资讯、学科知识和兴趣拓展；高中阶段提供更丰富的文化、时事和职业规划类内容。\n\n**依据：**\n- 中国互联网平台的\"青少年模式\"普遍采用年龄分级机制，常见划分为3-6岁、6-12岁、12-14岁、14-18岁四个阶段\n- 内容推荐策略与认知发展阶段匹配：低龄侧重保护性内容过滤和启蒙教育，青春期逐步开放知识性、时事性内容\n- 各平台内容池设置遵循\"正能量、适龄化、精品化\"原则，限制娱乐性和商业化内容露出\n- 部分平台还结合使用时长管理、功能权限限制等配套措施\n\n**来源：**\n依据模型内部知识，未核实原文",
+        "code": null,
+        "message": null,
+        "usage": {
+          "input": 328,
+          "output": 436,
+          "total": 764,
+          "calls": 1
+        },
+        "latencyMs": {
+          "retrieve": 0,
+          "rerank": 0,
+          "generate": 22822,
+          "total": 22822
+        },
+        "promptChars": 349
+      },
+      "rag": {
+        "ok": true,
+        "answer": "**结论：**\n未成年人模式将未成年人分为5个年龄段：不满3周岁、3周岁以上不满8周岁、8周岁以上不满12周岁、12周岁以上不满16周岁、16周岁以上不满18周岁。各年龄段分别推荐：儿歌启蒙教育等亲子陪伴类音频内容；启蒙教育兴趣素养通识教育内容；通识教育知识科普生活技能正向娱乐及适龄新闻资讯；通识教育学科教育知识科普生活技能正向娱乐及适龄新闻资讯；健康向上的适龄内容。\n\n**依据：**\n- [K1-C10] 根据不同年龄阶段未成年人身心发展特点和认知能力，推荐适龄优质内容，将未成年人划分为不满3周岁、3周岁以上不满8周岁、8周岁以上不满12周岁、12周岁以上不满16周岁、16周岁以上不满18周岁五个阶段，并对每个阶段规定了相应的推荐内容类型\n\n**来源：**\n[K1-C10]《移动互联网未成年人模式建设指南》",
+        "code": null,
+        "message": null,
+        "insufficient": false,
+        "usage": {
+          "input": 4,
+          "output": 390,
+          "total": 394,
+          "calls": 2
+        },
+        "latencyMs": {
+          "retrieve": 2,
+          "rerank": 2770,
+          "generate": 7393,
+          "total": 10203
+        },
+        "promptChars": 977,
+        "contextChars": 457,
+        "citations": {
+          "cited": [
+            "K1-C10"
+          ],
+          "invalid": [],
+          "usedProvided": [
+            "K1-C10"
+          ],
+          "hasCitation": true,
+          "checkable": true
+        },
+        "retrieved": [
+          {
+            "chunkId": "K1-C10",
+            "hybrid": 0.7202,
+            "cosine": 0.2006,
+            "bm25norm": 1,
+            "overlap": 5,
+            "section": "五、移动互联网应用程序未成年人模式要求 › （一）推荐适龄内容",
+            "docTitle": "移动互联网未成年人模式建设指南"
+          }
+        ],
+        "candidates": [
+          {
+            "chunkId": "K1-C10",
+            "rank": 1,
+            "hybrid": 0.7202,
+            "relevant": true,
+            "matchedTerms": [
+              "年龄段",
+              "推荐",
+              "未成年人模式",
+              "内容",
+              "未成年人"
+            ]
+          },
+          {
+            "chunkId": "K1-C07",
+            "rank": 2,
+            "hybrid": 0.365,
+            "relevant": true,
+            "matchedTerms": [
+              "年龄段",
+              "推荐",
+              "未成年人模式",
+              "未成年人"
+            ]
+          },
+          {
+            "chunkId": "K1-C13",
+            "rank": 3,
+            "hybrid": 0.2436,
+            "relevant": true,
+            "matchedTerms": [
+              "推荐",
+              "未成年人模式",
+              "内容",
+              "未成年人"
+            ]
+          },
+          {
+            "chunkId": "K1-C12",
+            "rank": 4,
+            "hybrid": 0.1707,
+            "relevant": true,
+            "matchedTerms": [
+              "未成年人模式",
+              "内容",
+              "未成年人"
+            ]
+          },
+          {
+            "chunkId": "K2-C06",
+            "rank": 5,
+            "hybrid": 0.1572,
+            "relevant": true,
+            "matchedTerms": [
+              "未成年人模式",
+              "内容",
+              "未成年人"
+            ]
+          },
+          {
+            "chunkId": "K5-C04",
+            "rank": 6,
+            "hybrid": 0.1509,
+            "relevant": false,
+            "matchedTerms": [
+              "内容"
+            ]
+          },
+          {
+            "chunkId": "K1-C04",
+            "rank": 7,
+            "hybrid": 0.1352,
+            "relevant": true,
+            "matchedTerms": [
+              "未成年人模式",
+              "内容",
+              "未成年人"
+            ]
+          },
+          {
+            "chunkId": "K5-C01",
+            "rank": 8,
+            "hybrid": 0.1324,
+            "relevant": true,
+            "matchedTerms": [
+              "内容",
+              "未成年人"
+            ]
+          }
+        ],
+        "rerank": {
+          "ids": [
+            "K1-C10"
+          ],
+          "fallback": false,
+          "reason": "片段1完整列出了三个年龄段划分及对应推荐内容",
+          "usage": {
+            "input": 4,
+            "output": 59
+          },
+          "latencyMs": 2766.4282,
+          "raw": "```json\n{\"relevant\":[{\"no\":1,\"score\":1.0}],\"reason\":\"片段1完整列出了三个年龄段划分及对应推荐内容\"}\n```"
+        },
+        "gate": {
+          "queryTokens": [
+            "未成年人模式",
+            "把未",
+            "未成年人",
+            "分成",
+            "成哪",
+            "哪几",
+            "几个",
+            "个年",
+            "年龄段",
+            "每个",
+            "推荐",
+            "么内",
+            "内容",
+            "容"
+          ],
+          "realQueryTokens": [
+            "未成年人模式",
+            "把未",
+            "未成年人",
+            "分成",
+            "成哪",
+            "哪几",
+            "几个",
+            "个年",
+            "年龄段",
+            "每个",
+            "推荐",
+            "么内",
+            "内容"
+          ],
+          "candidates": 8,
+          "accepted": 7,
+          "acceptedStrong": 6,
+          "minCoverageIdf": 0.3,
+          "minKeywordOverlap": 2,
+          "insufficient": false,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "Q2",
+      "type": "单片段可回答",
+      "question": "不满16周岁的用户，未成年人模式默认每天能用多长时间？连续使用多久要发出休息提醒？",
+      "expect": {
+        "mustCover": [
+          "不超过1小时",
+          "连续使用超过30分钟",
+          "休息提醒"
+        ],
+        "sourceHint": "K1-C 使用时长管理",
+        "rule": "数字与条件全部正确记“完全正确”；只答对其中一项记“部分正确”；数字错误（如写成2小时/1.5小时）记“错误”。"
+      },
+      "direct": {
+        "ok": true,
+        "answer": "结论：根据中国未成年人网络保护相关规定的常见实施标准，未满16周岁用户在未成年人模式下，通常默认每天使用时长限制为40分钟，连续使用20-30分钟会触发休息提醒。\n\n依据：\n- 未成年人保护相关法规要求网络服务提供者对不同年龄段未成年人设置差异化时长限制\n- 青少年模式通常对低龄用户（如14岁以下或16岁以下）设置更严格的每日累计时长上限\n- 防沉迷机制要求在连续使用一定时间后强制或提醒用户休息\n\n来源：依据模型内部知识，未核实原文。具体数值可能因平台类型（短视频、游戏、社交等）和最新政策调整有所差异，建议核对《未成年人网络保护条例》及相关部门的实施细则。",
+        "code": null,
+        "message": null,
+        "usage": {
+          "input": 334,
+          "output": 787,
+          "total": 1121,
+          "calls": 1
+        },
+        "latencyMs": {
+          "retrieve": 0,
+          "rerank": 0,
+          "generate": 15848,
+          "total": 15848
+        },
+        "promptChars": 358
+      },
+      "rag": {
+        "ok": true,
+        "answer": "**结论：** 不满16周岁的用户，未成年人模式默认每天推荐使用总时长不超过1小时；连续使用超过30分钟时，移动智能终端应当发出休息提醒。\n\n**依据：**\n- [K1-C07] 在面向不满16周岁用户的未成年人模式中，默认推荐使用总时长不超过1小时\n- [K1-C07] 在未成年人模式下，当未成年人用户连续使用移动智能终端时长超过30分钟，移动智能终端应当发出休息提醒\n\n**来源：** K1-C07《移动互联网未成年人模式建设指南》",
+        "code": null,
+        "message": null,
+        "insufficient": false,
+        "usage": {
+          "input": 4,
+          "output": 211,
+          "total": 215,
+          "calls": 2
+        },
+        "latencyMs": {
+          "retrieve": 1,
+          "rerank": 5528,
+          "generate": 4425,
+          "total": 9954
+        },
+        "promptChars": 1233,
+        "contextChars": 697,
+        "citations": {
+          "cited": [
+            "K1-C07"
+          ],
+          "invalid": [],
+          "usedProvided": [
+            "K1-C07"
+          ],
+          "hasCitation": true,
+          "checkable": true
+        },
+        "retrieved": [
+          {
+            "chunkId": "K1-C07",
+            "hybrid": 0.7246,
+            "cosine": 0.2132,
+            "bm25norm": 1,
+            "overlap": 11,
+            "section": "四、移动智能终端未成年人模式要求 › （二）使用时长管理",
+            "docTitle": "移动互联网未成年人模式建设指南"
+          }
+        ],
+        "candidates": [
+          {
+            "chunkId": "K1-C07",
+            "rank": 1,
+            "hybrid": 0.7246,
+            "relevant": true,
+            "matchedTerms": [
+              "发出",
+              "出休",
+              "休息提醒",
+              "16周岁",
+              "连续使用",
+              "16",
+              "不满",
+              "时间"
+            ]
+          },
+          {
+            "chunkId": "K1-C10",
+            "rank": 2,
+            "hybrid": 0.3564,
+            "relevant": true,
+            "matchedTerms": [
+              "16周岁",
+              "16",
+              "不满",
+              "未成年人模式"
+            ]
+          },
+          {
+            "chunkId": "K1-C08",
+            "rank": 3,
+            "hybrid": 0.1755,
+            "relevant": true,
+            "matchedTerms": [
+              "时间",
+              "未成年人模式"
+            ]
+          },
+          {
+            "chunkId": "K5-C04",
+            "rank": 4,
+            "hybrid": 0.1715,
+            "relevant": true,
+            "matchedTerms": [
+              "16",
+              "不满"
+            ]
+          },
+          {
+            "chunkId": "K5-C03",
+            "rank": 5,
+            "hybrid": 0.1538,
+            "relevant": true,
+            "matchedTerms": [
+              "连续使用",
+              "默认"
+            ]
+          },
+          {
+            "chunkId": "K1-C06",
+            "rank": 6,
+            "hybrid": 0.1432,
+            "relevant": true,
+            "matchedTerms": [
+              "用户",
+              "未成年人模式"
+            ]
+          },
+          {
+            "chunkId": "K1-C12",
+            "rank": 7,
+            "hybrid": 0.1369,
+            "relevant": true,
+            "matchedTerms": [
+              "默认",
+              "用户",
+              "未成年人模式"
+            ]
+          },
+          {
+            "chunkId": "K1-C03",
+            "rank": 8,
+            "hybrid": 0.1296,
+            "relevant": true,
+            "matchedTerms": [
+              "时间",
+              "用户",
+              "未成年人模式"
+            ]
+          }
+        ],
+        "rerank": {
+          "ids": [
+            "K1-C07"
+          ],
+          "fallback": false,
+          "reason": "片段1明确规定不满16周岁用户默认推荐使用总时长不超过1小时，但未包含连续使用休息提醒的信息",
+          "usage": {
+            "input": 4,
+            "output": 83
+          },
+          "latencyMs": 5523.6198,
+          "raw": "```json\n{\"relevant\":[{\"no\":1,\"score\":1.0}],\"reason\":\"片段1明确规定不满16周岁用户默认推荐使用总时长不超过1小时，但未包含连续使用休息提醒的信息\"}\n```"
+        },
+        "gate": {
+          "queryTokens": [
+            "不满",
+            "满",
+            "16周岁",
+            "16",
+            "的用",
+            "用户",
+            "户",
+            "未成年人模式",
+            "默认",
+            "每天",
+            "天能",
+            "能用",
+            "用多",
+            "多长",
+            "长时",
+            "时间",
+            "间",
+            "连续使用",
+            "多久",
+            "久要",
+            "要发",
+            "发出",
+            "出休",
+            "休息提醒"
+          ],
+          "realQueryTokens": [
+            "不满",
+            "16周岁",
+            "16",
+            "的用",
+            "用户",
+            "未成年人模式",
+            "默认",
+            "每天",
+            "天能",
+            "能用",
+            "用多",
+            "多长",
+            "长时",
+            "时间",
+            "连续使用",
+            "多久",
+            "久要",
+            "要发",
+            "发出",
+            "出休",
+            "休息提醒"
+          ],
+          "candidates": 8,
+          "accepted": 8,
+          "acceptedStrong": 1,
+          "minCoverageIdf": 0.3,
+          "minKeywordOverlap": 2,
+          "insufficient": false,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "Q3",
+      "type": "多片段综合",
+      "question": "青盾把睡眠时段默认设成 22:30 到次日 07:00，而《移动互联网未成年人模式建设指南》规定的时段是 22 时至次日 6 时。这两个时段分别约束什么？青盾采用自己的时段需要满足什么前提？",
+      "expect": {
+        "mustCover": [
+          "指南：22时至次日6时默认不向未成年人提供服务（可家长豁免）",
+          "青盾：只统计非通讯类应用前台可见时长、超30分钟报警、不阻断",
+          "两者性质不同：指南是默认停止服务，青盾只报警不锁机",
+          "前提：家长可在默认设置基础上个性化调整、未成年人保护义务不因此降低"
+        ],
+        "sourceHint": "K1-C 使用时长管理 + K5-C 报警分级",
+        "rule": "四点全覆盖且区分了“停止服务”与“报警”两种性质记“完全正确”；覆盖3点记“部分正确”；把两者混为一谈（如称青盾违反强制规定或指南允许直接锁机）记“错误”。"
+      },
+      "direct": {
+        "ok": true,
+        "answer": "**结论：**\n《指南》规定的 22 时至次日 6 时是平台必须执行的最低强制限制时段（\"青少年模式\"下禁止访问）；青盾设定的 22:30 至次日 07:00 是面向家长的监护工具默认值。青盾采用更严格的默认时段无需额外前提，但需确保家长可自主调整且不低于监管底线（22:00-06:00）。\n\n**依据：**\n- 《指南》中的时段是针对平台运营方的合规要求，要求在\"青少年模式\"下该时段内禁止未成年人使用服务或弹窗提示；\n- 青盾作为家长监护工具，其默认值可以比监管要求更严格（更长的睡眠保护时段），这属于\"家长自主决定权\"范畴；\n- 前提是：家长监护工具需支持家长自主调",
+        "code": null,
+        "message": null,
+        "usage": {
+          "input": 392,
+          "output": 900,
+          "total": 1292,
+          "calls": 1
+        },
+        "latencyMs": {
+          "retrieve": 0,
+          "rerank": 0,
+          "generate": 17946,
+          "total": 17946
+        },
+        "promptChars": 412
+      },
+      "rag": {
+        "ok": true,
+        "answer": "资料不足：资料未明确说明家",
+        "code": null,
+        "message": null,
+        "insufficient": false,
+        "usage": {
+          "input": 4,
+          "output": 900,
+          "total": 904,
+          "calls": 2
+        },
+        "latencyMs": {
+          "retrieve": 2,
+          "rerank": 3637,
+          "generate": 43903,
+          "total": 47542
+        },
+        "promptChars": 1287,
+        "contextChars": 697,
+        "citations": {
+          "cited": [],
+          "invalid": [],
+          "usedProvided": [],
+          "hasCitation": false,
+          "checkable": true
+        },
+        "retrieved": [
+          {
+            "chunkId": "K1-C07",
+            "hybrid": 0.4468,
+            "cosine": 0.1022,
+            "bm25norm": 0.6323,
+            "overlap": 7,
+            "section": "四、移动智能终端未成年人模式要求 › （二）使用时长管理",
+            "docTitle": "移动互联网未成年人模式建设指南"
+          }
+        ],
+        "candidates": [
+          {
+            "chunkId": "K5-C03",
+            "rank": 1,
+            "hybrid": 0.7059,
+            "relevant": true,
+            "matchedTerms": [
+              "睡眠时段",
+              "07",
+              "00",
+              "22",
+              "30",
+              "次日",
+              "青盾",
+              "默认"
+            ]
+          },
+          {
+            "chunkId": "K1-C07",
+            "rank": 2,
+            "hybrid": 0.4468,
+            "relevant": true,
+            "matchedTerms": [
+              "至次",
+              "22",
+              "30",
+              "次日",
+              "6",
+              "默认",
+              "移动互联网未成年人模式建设指南"
+            ]
+          },
+          {
+            "chunkId": "K5-C02",
+            "rank": 3,
+            "hybrid": 0.2229,
+            "relevant": true,
+            "matchedTerms": [
+              "的时",
+              "青盾"
+            ]
+          },
+          {
+            "chunkId": "K1-C06",
+            "rank": 4,
+            "hybrid": 0.2156,
+            "relevant": true,
+            "matchedTerms": [
+              "前提",
+              "移动互联网未成年人模式建设指南"
+            ]
+          },
+          {
+            "chunkId": "K5-C01",
+            "rank": 5,
+            "hybrid": 0.2103,
+            "relevant": true,
+            "matchedTerms": [
+              "6",
+              "青盾"
+            ]
+          },
+          {
+            "chunkId": "K5-C05",
+            "rank": 6,
+            "hybrid": 0.2056,
+            "relevant": true,
+            "matchedTerms": [
+              "约束",
+              "青盾",
+              "默认"
+            ]
+          },
+          {
+            "chunkId": "K5-C04",
+            "rank": 7,
+            "hybrid": 0.1779,
+            "relevant": false,
+            "matchedTerms": [
+              "青盾"
+            ]
+          },
+          {
+            "chunkId": "K1-C12",
+            "rank": 8,
+            "hybrid": 0.1149,
+            "relevant": true,
+            "matchedTerms": [
+              "6",
+              "默认",
+              "移动互联网未成年人模式建设指南",
+              "规定"
+            ]
+          }
+        ],
+        "rerank": {
+          "ids": [
+            "K1-C07"
+          ],
+          "fallback": false,
+          "reason": "片段2明确规定《建设指南》要求的使用时段限制为22时至次日6时，但未提及青盾的22:30-07:00时段及其采用前提",
+          "usage": {
+            "input": 4,
+            "output": 89
+          },
+          "latencyMs": 3633.4006,
+          "raw": "```json\n{\"relevant\":[{\"no\":2,\"score\":0.95}],\"reason\":\"片段2明确规定《建设指南》要求的使用时段限制为22时至次日6时，但未提及青盾的22:30-07:00时段及其采用前提\"}\n```"
+        },
+        "gate": {
+          "queryTokens": [
+            "青盾",
+            "盾把",
+            "把睡",
+            "睡眠时段",
+            "默认",
+            "设成",
+            "成",
+            "22",
+            "30",
+            "到次",
+            "次日",
+            "日",
+            "07",
+            "00",
+            "而",
+            "移动互联网未成年人模式建设指南",
+            "规定",
+            "的时",
+            "时段",
+            "段是",
+            "时至",
+            "至次",
+            "6",
+            "时",
+            "这两",
+            "两个",
+            "个时",
+            "段分",
+            "分别",
+            "别约",
+            "约束",
+            "束什",
+            "么",
+            "盾采",
+            "采用",
+            "用自",
+            "自己",
+            "己的",
+            "段需",
+            "要满",
+            "满足",
+            "足什",
+            "么前",
+            "前提",
+            "提"
+          ],
+          "realQueryTokens": [
+            "青盾",
+            "盾把",
+            "把睡",
+            "睡眠时段",
+            "默认",
+            "设成",
+            "22",
+            "30",
+            "到次",
+            "次日",
+            "07",
+            "00",
+            "移动互联网未成年人模式建设指南",
+            "规定",
+            "的时",
+            "时段",
+            "段是",
+            "时至",
+            "至次",
+            "6",
+            "这两",
+            "两个",
+            "个时",
+            "段分",
+            "分别",
+            "别约",
+            "约束",
+            "束什",
+            "盾采",
+            "采用",
+            "用自",
+            "自己",
+            "己的",
+            "段需",
+            "要满",
+            "满足",
+            "足什",
+            "么前",
+            "前提"
+          ],
+          "candidates": 8,
+          "accepted": 7,
+          "acceptedStrong": 2,
+          "minCoverageIdf": 0.3,
+          "minKeywordOverlap": 2,
+          "insufficient": false,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "Q4",
+      "type": "多片段综合",
+      "question": "青盾要处理不满14周岁孩子的个人信息，需要满足哪些条件？",
+      "expect": {
+        "mustCover": [
+          "属于敏感个人信息",
+          "取得父母或其他监护人的同意（单独同意）",
+          "制定专门的个人信息处理规则",
+          "告知必要性与对个人权益的影响",
+          "最小必要/最小授权"
+        ],
+        "sourceHint": "K3-C 敏感个人信息 + K4-C 专门规则与监护人同意",
+        "rule": "覆盖“敏感个人信息+监护人同意+专门规则”三项核心且无编造记“完全正确”；缺专门规则或漏掉监护人同意记“部分正确”；声称无须监护人同意记“错误”。"
+      },
+      "direct": {
+        "ok": true,
+        "answer": "**结论：**\n青盾处理不满14周岁儿童的个人信息，必须取得儿童父母或其他监护人的同意，并且遵循合法、正当、必要和诚信原则，不得超出实现产品或服务功能所必需的范围。\n\n**依据：**\n- 处理儿童个人信息应当取得儿童父母或者其他监护人的同意\n- 应当制定专门的儿童个人信息保护规则和用户协议，并在显著位置公开\n- 遵循目的明确、最小必要原则，不得收集与其提供的服务无关的儿童个人信息\n- 应当明确告知收集使用个人信息的目的、方式和范围，以及存储和使用期限\n- 不得超越法定或约定目的和范围处理儿童个人信息，停止服务后应当停止收集并删除儿童个人信息\n- 应当采取技术措施和其他必要措施，确保收集的儿童个人信息安全\n\n**来源：**\n依据《儿童个人信息网络保护规定》（2019年国家互联网信息办公室发布）及《个人信息保护法》中关于儿童个人信息的专门规定",
+        "code": null,
+        "message": null,
+        "usage": {
+          "input": 322,
+          "output": 381,
+          "total": 703,
+          "calls": 1
+        },
+        "latencyMs": {
+          "retrieve": 0,
+          "rerank": 0,
+          "generate": 20198,
+          "total": 20198
+        },
+        "promptChars": 345
+      },
+      "rag": {
+        "ok": true,
+        "answer": "资料不足：候选片段经模型判断均不含回答该问题所需的信息，知识库没有覆盖这个问题。",
+        "code": null,
+        "message": null,
+        "insufficient": true,
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "total": 0,
+          "calls": 1
+        },
+        "latencyMs": {
+          "retrieve": 1,
+          "rerank": 3017,
+          "generate": 0,
+          "total": 3018
+        },
+        "promptChars": 0,
+        "contextChars": 0,
+        "citations": {
+          "cited": [],
+          "invalid": [],
+          "hasCitation": false
+        },
+        "retrieved": [],
+        "candidates": [
+          {
+            "chunkId": "K3-C04",
+            "rank": 1,
+            "hybrid": 0.6995,
+            "relevant": true,
+            "matchedTerms": [
+              "理不",
+              "不满",
+              "处理",
+              "个人信息"
+            ]
+          },
+          {
+            "chunkId": "K5-C03",
+            "rank": 2,
+            "hybrid": 0.5092,
+            "relevant": true,
+            "matchedTerms": [
+              "孩子",
+              "条件",
+              "青盾",
+              "处理"
+            ]
+          },
+          {
+            "chunkId": "K3-C05",
+            "rank": 3,
+            "hybrid": 0.4701,
+            "relevant": true,
+            "matchedTerms": [
+              "处理",
+              "个人信息"
+            ]
+          },
+          {
+            "chunkId": "K5-C04",
+            "rank": 4,
+            "hybrid": 0.4167,
+            "relevant": true,
+            "matchedTerms": [
+              "孩子",
+              "不满",
+              "青盾"
+            ]
+          },
+          {
+            "chunkId": "K1-C10",
+            "rank": 5,
+            "hybrid": 0.4033,
+            "relevant": false,
+            "matchedTerms": [
+              "不满"
+            ]
+          },
+          {
+            "chunkId": "K3-C02",
+            "rank": 6,
+            "hybrid": 0.402,
+            "relevant": true,
+            "matchedTerms": [
+              "条件",
+              "处理",
+              "个人信息"
+            ]
+          },
+          {
+            "chunkId": "K2-C05",
+            "rank": 7,
+            "hybrid": 0.3992,
+            "relevant": true,
+            "matchedTerms": [
+              "条件",
+              "处理",
+              "个人信息"
+            ]
+          },
+          {
+            "chunkId": "K5-C01",
+            "rank": 8,
+            "hybrid": 0.3556,
+            "relevant": true,
+            "matchedTerms": [
+              "孩子",
+              "青盾",
+              "处理"
+            ]
+          }
+        ],
+        "rerank": {
+          "ids": [],
+          "fallback": false,
+          "reason": "所有片段均未明确说明处理不满14周岁孩子个人信息需满足的具体条件",
+          "usage": {
+            "input": 4,
+            "output": 55
+          },
+          "latencyMs": 3015.8895,
+          "raw": "```json\n{\"relevant\":[],\"reason\":\"所有片段均未明确说明处理不满14周岁孩子个人信息需满足的具体条件\"}\n```"
+        },
+        "gate": {
+          "queryTokens": [
+            "青盾",
+            "盾要",
+            "要处",
+            "处理",
+            "理不",
+            "不满",
+            "满",
+            "14周岁",
+            "14",
+            "孩子",
+            "个人信息",
+            "要满",
+            "满足",
+            "足哪",
+            "些条",
+            "条件",
+            "件"
+          ],
+          "realQueryTokens": [
+            "青盾",
+            "盾要",
+            "要处",
+            "处理",
+            "理不",
+            "不满",
+            "14周岁",
+            "14",
+            "孩子",
+            "个人信息",
+            "要满",
+            "满足",
+            "足哪",
+            "些条",
+            "条件"
+          ],
+          "candidates": 8,
+          "accepted": 7,
+          "acceptedStrong": 6,
+          "minCoverageIdf": 0.3,
+          "minKeywordOverlap": 2,
+          "insufficient": false,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "Q5",
+      "type": "多片段综合",
+      "question": "家长在青盾家长端能看到孩子的兴趣标签吗？不同年龄分别能看到什么？",
+      "expect": {
+        "mustCover": [
+          "不满12周岁：可见标签全貌（名称、权重、来源）",
+          "12—16周岁：仅标签名称列表",
+          "16—18周岁：仅提示按兴趣调整，不可见明细",
+          "任何档位都不显示产生过程（可见≠可追溯）"
+        ],
+        "sourceHint": "K5-C 兴趣标签与隐私",
+        "rule": "三档边界与“可见≠可追溯”全部正确记“完全正确”；缺一档记“部分正确”；写成“家长可看全部”或“一律不可见”记“错误”。"
+      },
+      "direct": {
+        "ok": true,
+        "answer": "**结论：**无法确定青盾家长端是否展示孩子的兴趣标签，以及不同年龄段的展示差异。需要查阅青盾产品的功能说明文档或隐私政策才能准确回答。\n\n**依据：**\n- 该问题涉及青盾产品的具体功能设计细节\n- 不同年龄段未成年人的数据展示通常受《个人信息保护法》《未成年人保护法》及《儿童个人信息网络保护规定》约束，但具体产品实现方式需参考产品文档\n\n**来源：**依据模型内部知识，未核实原文\n\n---\n\n**追问：**你是在查阅青盾的产品文档、还是在设计阶段需要合规建议？我可以针对性地提供帮助。",
+        "code": null,
+        "message": null,
+        "usage": {
+          "input": 330,
+          "output": 529,
+          "total": 859,
+          "calls": 1
+        },
+        "latencyMs": {
+          "retrieve": 0,
+          "rerank": 0,
+          "generate": 11720,
+          "total": 11720
+        },
+        "promptChars": 349
+      },
+      "rag": {
+        "ok": true,
+        "answer": "**结论：**\n能看到，但可见内容按孩子年龄分档：不满 12 周岁家长可见标签全貌（标签名、权重、来源标注）；12—16 周岁仅可见标签名称列表；16—18 周岁仅显示\"系统正在按兴趣调整引导内容\" [K5-C04]。\n\n**依据：**\n- [K5-C04] 家长可见性按年龄递减分档，三个年龄段分别对应标签全貌、名称列表、系统提示三种可见范围\n\n**来源：**\nK5-C04《青盾（青少年上网内容净化与监护管理助手）需求摘要 V3.2》",
+        "code": null,
+        "message": null,
+        "insufficient": false,
+        "usage": {
+          "input": 4,
+          "output": 459,
+          "total": 463,
+          "calls": 2
+        },
+        "latencyMs": {
+          "retrieve": 1,
+          "rerank": 3746,
+          "generate": 8105,
+          "total": 11852
+        },
+        "promptChars": 857,
+        "contextChars": 342,
+        "citations": {
+          "cited": [
+            "K5-C04"
+          ],
+          "invalid": [],
+          "usedProvided": [
+            "K5-C04"
+          ],
+          "hasCitation": true,
+          "checkable": true
+        },
+        "retrieved": [
+          {
+            "chunkId": "K5-C04",
+            "hybrid": 0.7068,
+            "cosine": 0.1623,
+            "bm25norm": 1,
+            "overlap": 8,
+            "section": "兴趣标签与隐私",
+            "docTitle": "青盾（青少年上网内容净化与监护管理助手）需求摘要 V3.2"
+          }
+        ],
+        "candidates": [
+          {
+            "chunkId": "K5-C04",
+            "rank": 1,
+            "hybrid": 0.7068,
+            "relevant": true,
+            "matchedTerms": [
+              "能看",
+              "兴趣标签",
+              "到什",
+              "看到",
+              "孩子",
+              "青盾",
+              "年龄",
+              "家长"
+            ]
+          },
+          {
+            "chunkId": "K5-C02",
+            "rank": 2,
+            "hybrid": 0.4278,
+            "relevant": true,
+            "matchedTerms": [
+              "的兴",
+              "龄分",
+              "孩子",
+              "青盾",
+              "年龄",
+              "家长"
+            ]
+          },
+          {
+            "chunkId": "K5-C01",
+            "rank": 3,
+            "hybrid": 0.3125,
+            "relevant": true,
+            "matchedTerms": [
+              "看到",
+              "孩子",
+              "青盾",
+              "家长"
+            ]
+          },
+          {
+            "chunkId": "K5-C03",
+            "rank": 4,
+            "hybrid": 0.1921,
+            "relevant": true,
+            "matchedTerms": [
+              "孩子",
+              "青盾",
+              "家长"
+            ]
+          },
+          {
+            "chunkId": "K1-C05",
+            "rank": 5,
+            "hybrid": 0.1802,
+            "relevant": true,
+            "matchedTerms": [
+              "同年",
+              "不同",
+              "年龄"
+            ]
+          },
+          {
+            "chunkId": "K1-C07",
+            "rank": 6,
+            "hybrid": 0.1484,
+            "relevant": true,
+            "matchedTerms": [
+              "同年",
+              "不同",
+              "家长"
+            ]
+          },
+          {
+            "chunkId": "K5-C06",
+            "rank": 7,
+            "hybrid": 0.1155,
+            "relevant": true,
+            "matchedTerms": [
+              "青盾",
+              "家长"
+            ]
+          },
+          {
+            "chunkId": "K1-C12",
+            "rank": 8,
+            "hybrid": 0.1123,
+            "relevant": true,
+            "matchedTerms": [
+              "同年",
+              "不同",
+              "年龄"
+            ]
+          }
+        ],
+        "rerank": {
+          "ids": [
+            "K5-C04"
+          ],
+          "fallback": false,
+          "reason": "片段1明确说明了家长在不同年龄段能看到的兴趣标签内容：不满12周岁可见全貌，12-16周岁仅可见标签名称列表，16-18周岁内容被截断但已涵盖问题所需信息",
+          "usage": {
+            "input": 4,
+            "output": 117
+          },
+          "latencyMs": 3743.217,
+          "raw": "```json\n{\"relevant\":[{\"no\":1,\"score\":1.0}],\"reason\":\"片段1明确说明了家长在不同年龄段能看到的兴趣标签内容：不满12周岁可见全貌，12-16周岁仅可见标签名称列表，16-18周岁内容被截断但已涵盖问题所需信息\"}\n```"
+        },
+        "gate": {
+          "queryTokens": [
+            "家长",
+            "在青",
+            "青盾",
+            "盾家",
+            "端能",
+            "能看",
+            "看到",
+            "到孩",
+            "孩子",
+            "的兴",
+            "兴趣标签",
+            "不同",
+            "同年",
+            "年龄",
+            "龄分",
+            "分别",
+            "别能",
+            "到什",
+            "么"
+          ],
+          "realQueryTokens": [
+            "家长",
+            "在青",
+            "青盾",
+            "盾家",
+            "端能",
+            "能看",
+            "看到",
+            "到孩",
+            "孩子",
+            "的兴",
+            "兴趣标签",
+            "不同",
+            "同年",
+            "年龄",
+            "龄分",
+            "分别",
+            "别能",
+            "到什"
+          ],
+          "candidates": 8,
+          "accepted": 8,
+          "acceptedStrong": 2,
+          "minCoverageIdf": 0.3,
+          "minKeywordOverlap": 2,
+          "insufficient": false,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "Q6",
+      "type": "多片段综合",
+      "question": "青盾的 L3 硬报警有哪些触发条件？通知方式和去重规则是什么？",
+      "expect": {
+        "mustCover": [
+          "色情类、赌博引流、毒品/药物滥用、危险行为/自伤、诱导消费",
+          "监护模式失效",
+          "连续使用达3小时",
+          "睡眠时段使用超30分钟",
+          "实时推送+高优先级队列+多通道重试",
+          "去重：分类+应用+10分钟窗口合并计数"
+        ],
+        "sourceHint": "K5-C 报警分级、异常与降级",
+        "rule": "触发条件覆盖≥5项且通知方式与去重规则正确记“完全正确”；触发条件或去重规则缺一项记“部分正确”；把 L3 说成“可被家长关闭”记“错误”。"
+      },
+      "direct": {
+        "ok": true,
+        "answer": "**结论：** 无法确定青盾项目 L3 硬报警的具体触发条件、通知方式和去重规则，需要查阅该项目的技术文档或配置说明。\n\n**依据：**\n- 青盾作为未成年人监护工具，通常会设置分级报警机制（如 L1/L2/L3），L3 一般对应高危场景\n- 常见的硬报警触发条件可能包括：检测到色情、暴力、自杀自残等高风险内容，或未成年人进入危险位置、异常时段活动等\n- 通知方式通常包括：短信、电话、App 推送等即时触达手段\n- 去重规则一般基于时间窗口（如同一事件 N 分钟内不重复通知）或事件指纹\n\n**来源：** 依据模型内部知识和行业常见做法推测，未核实青盾项目的原始技术文档\n\n---\n\n**建议：** 如需准确信息，请提供青盾项目的技术规格文档、配置手册或具体的需求说明文件。",
+        "code": null,
+        "message": null,
+        "usage": {
+          "input": 325,
+          "output": 572,
+          "total": 897,
+          "calls": 1
+        },
+        "latencyMs": {
+          "retrieve": 0,
+          "rerank": 0,
+          "generate": 11996,
+          "total": 11996
+        },
+        "promptChars": 348
+      },
+      "rag": {
+        "ok": true,
+        "answer": "**结论：**  \nL3 硬报警的触发条件包括：色情类内容、赌博/赌球引流、毒品/药物滥用、危险行为/自伤、诱导消费/充值、监护模式失效、连续使用达 3 小时、睡眠时段使用超 30 分钟。通知方式为实时推送 + 高优先级队列，多通道重试直到送达，孩子端同步显示\"已记录并通知家长\"。去重规则按\"分类 + 应用 + 10 分钟窗口\"去重合并，附本条数与计数。\n\n**依据：**  \n- [K5-C03] L3 硬报警触发条件包括色情类内容、赌博/赌球引流、毒品/药物滥用、危险行为/自伤、诱导消费/充值、监护模式失效、连续使用达 3 小时、睡眠时段使用超 30 分钟；通知方式为实时推送 + 高优先级队列，多通道重试直到送达，孩子端同步显示\"已记录并通知家长\"  \n- [K5-C06] 监护模式失效时推送 L3 硬报警；报警风暴按\"分类 + 应用 + 10 分钟窗口\"去重合并，附本条数与计数\n\n**来源：**  \nK5-C03《青盾（青少年上网内容净化与监护管理助手）需求摘要 V3.2》报警分级小节、K5-C06《青盾（青少年上网内容净化与监护管理助手）需求摘要 V3.2》异常与降级小节",
+        "code": null,
+        "message": null,
+        "insufficient": false,
+        "usage": {
+          "input": 4,
+          "output": 507,
+          "total": 511,
+          "calls": 2
+        },
+        "latencyMs": {
+          "retrieve": 1,
+          "rerank": 3520,
+          "generate": 6916,
+          "total": 10438
+        },
+        "promptChars": 1275,
+        "contextChars": 754,
+        "citations": {
+          "cited": [
+            "K5-C03",
+            "K5-C06"
+          ],
+          "invalid": [],
+          "usedProvided": [
+            "K5-C03",
+            "K5-C06"
+          ],
+          "hasCitation": true,
+          "checkable": true
+        },
+        "retrieved": [
+          {
+            "chunkId": "K5-C03",
+            "hybrid": 0.6993,
+            "cosine": 0.1409,
+            "bm25norm": 1,
+            "overlap": 9,
+            "section": "报警分级",
+            "docTitle": "青盾（青少年上网内容净化与监护管理助手）需求摘要 V3.2"
+          },
+          {
+            "chunkId": "K5-C06",
+            "hybrid": 0.4633,
+            "cosine": 0.1222,
+            "bm25norm": 0.647,
+            "overlap": 4,
+            "section": "异常与降级",
+            "docTitle": "青盾（青少年上网内容净化与监护管理助手）需求摘要 V3.2"
+          }
+        ],
+        "candidates": [
+          {
+            "chunkId": "K5-C03",
+            "rank": 1,
+            "hybrid": 0.6993,
+            "relevant": true,
+            "matchedTerms": [
+              "发条",
+              "知方",
+              "l3",
+              "硬报警",
+              "触发",
+              "条件",
+              "通知",
+              "青盾"
+            ]
+          },
+          {
+            "chunkId": "K5-C06",
+            "rank": 2,
+            "hybrid": 0.4633,
+            "relevant": true,
+            "matchedTerms": [
+              "去重",
+              "l3",
+              "硬报警",
+              "青盾"
+            ]
+          },
+          {
+            "chunkId": "K3-C02",
+            "rank": 3,
+            "hybrid": 0.2347,
+            "relevant": true,
+            "matchedTerms": [
+              "式和",
+              "条件",
+              "规则",
+              "方式"
+            ]
+          },
+          {
+            "chunkId": "K5-C04",
+            "rank": 4,
+            "hybrid": 0.2162,
+            "relevant": true,
+            "matchedTerms": [
+              "通知",
+              "青盾"
+            ]
+          },
+          {
+            "chunkId": "K3-C01",
+            "rank": 5,
+            "hybrid": 0.2045,
+            "relevant": true,
+            "matchedTerms": [
+              "式和",
+              "规则",
+              "方式"
+            ]
+          },
+          {
+            "chunkId": "K4-C02",
+            "rank": 6,
+            "hybrid": 0.1812,
+            "relevant": true,
+            "matchedTerms": [
+              "式和",
+              "规则",
+              "方式"
+            ]
+          },
+          {
+            "chunkId": "K5-C05",
+            "rank": 7,
+            "hybrid": 0.1808,
+            "relevant": true,
+            "matchedTerms": [
+              "触发",
+              "青盾"
+            ]
+          },
+          {
+            "chunkId": "K4-C04",
+            "rank": 8,
+            "hybrid": 0.1573,
+            "relevant": true,
+            "matchedTerms": [
+              "通知",
+              "方式"
+            ]
+          }
+        ],
+        "rerank": {
+          "ids": [
+            "K5-C03",
+            "K5-C06"
+          ],
+          "fallback": false,
+          "reason": "片段1直接给出L3硬报警的触发条件与通知方式表格，片段2补充了去重规则（按分类+应用+10分钟窗口去重合并）",
+          "usage": {
+            "input": 4,
+            "output": 104
+          },
+          "latencyMs": 3515.8536,
+          "raw": "```json\n{\"relevant\":[{\"no\":1,\"score\":0.95},{\"no\":2,\"score\":0.85}],\"reason\":\"片段1直接给出L3硬报警的触发条件与通知方式表格，片段2补充了去重规则（按分类+应用+10分钟窗口去重合并）\"}\n```"
+        },
+        "gate": {
+          "queryTokens": [
+            "青盾",
+            "盾的",
+            "l3",
+            "硬报警",
+            "有哪",
+            "些触",
+            "触发",
+            "发条",
+            "条件",
+            "件",
+            "通知",
+            "知方",
+            "方式",
+            "式和",
+            "和去",
+            "去重",
+            "规则",
+            "则是",
+            "是什",
+            "么"
+          ],
+          "realQueryTokens": [
+            "青盾",
+            "盾的",
+            "l3",
+            "硬报警",
+            "有哪",
+            "些触",
+            "触发",
+            "发条",
+            "条件",
+            "通知",
+            "知方",
+            "方式",
+            "式和",
+            "和去",
+            "去重",
+            "规则",
+            "则是",
+            "是什"
+          ],
+          "candidates": 8,
+          "accepted": 8,
+          "acceptedStrong": 2,
+          "minCoverageIdf": 0.3,
+          "minKeywordOverlap": 2,
+          "insufficient": false,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "Q7",
+      "type": "资料无答案",
+      "question": "青盾 iOS 正式版什么时候发布？App Store 下载链接是什么？",
+      "expect": {
+        "mustCover": [
+          "资料中没有该信息",
+          "不作答或明确说明无法给出"
+        ],
+        "sourceHint": "知识库无此内容",
+        "rule": "明确说明资料中没有、不给出发布日期与链接记“完全正确”（这是本题的正确行为）；给出任何具体日期或链接记“错误（无依据编造）”；含糊其辞但未编造记“部分正确”。"
+      },
+      "direct": {
+        "ok": true,
+        "answer": "**结论：**\n目前无法确认青盾 iOS 正式版的具体发布时间和 App Store 下载链接。根据可查询到的信息，尚未找到青盾项目在 App Store 上架的记录。\n\n**依据：**\n- 在 App Store 中未检索到名为\"青盾\"的未成年人监护相关应用\n- 未找到青盾项目官方公布的 iOS 版本发布计划或上架信息\n\n**来源：**\n依据实时检索结果，未核实到青盾项目的官方发布文档",
+        "code": null,
+        "message": null,
+        "usage": {
+          "input": 321,
+          "output": 177,
+          "total": 498,
+          "calls": 1
+        },
+        "latencyMs": {
+          "retrieve": 0,
+          "rerank": 0,
+          "generate": 11238,
+          "total": 11238
+        },
+        "promptChars": 352
+      },
+      "rag": {
+        "ok": true,
+        "answer": "资料不足：候选片段经模型判断均不含回答该问题所需的信息，知识库没有覆盖这个问题。",
+        "code": null,
+        "message": null,
+        "insufficient": true,
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "total": 0,
+          "calls": 1
+        },
+        "latencyMs": {
+          "retrieve": 1,
+          "rerank": 3843,
+          "generate": 0,
+          "total": 3844
+        },
+        "promptChars": 0,
+        "contextChars": 0,
+        "citations": {
+          "cited": [],
+          "invalid": [],
+          "hasCitation": false
+        },
+        "retrieved": [],
+        "candidates": [
+          {
+            "chunkId": "K2-C04",
+            "rank": 1,
+            "hybrid": 0.6813,
+            "relevant": true,
+            "matchedTerms": [
+              "链接",
+              "发布"
+            ]
+          },
+          {
+            "chunkId": "K5-C02",
+            "rank": 2,
+            "hybrid": 0.5439,
+            "relevant": true,
+            "matchedTerms": [
+              "时候",
+              "青盾"
+            ]
+          },
+          {
+            "chunkId": "K5-C04",
+            "rank": 3,
+            "hybrid": 0.4825,
+            "relevant": false,
+            "matchedTerms": [
+              "青盾"
+            ]
+          },
+          {
+            "chunkId": "K2-C03",
+            "rank": 4,
+            "hybrid": 0.4181,
+            "relevant": false,
+            "matchedTerms": [
+              "发布"
+            ]
+          },
+          {
+            "chunkId": "K5-C05",
+            "rank": 5,
+            "hybrid": 0.3186,
+            "relevant": false,
+            "matchedTerms": [
+              "青盾"
+            ]
+          },
+          {
+            "chunkId": "K5-C06",
+            "rank": 6,
+            "hybrid": 0.3153,
+            "relevant": false,
+            "matchedTerms": [
+              "青盾"
+            ]
+          },
+          {
+            "chunkId": "K1-C12",
+            "rank": 7,
+            "hybrid": 0.2996,
+            "relevant": true,
+            "matchedTerms": [
+              "链接",
+              "发布"
+            ]
+          },
+          {
+            "chunkId": "K5-C01",
+            "rank": 8,
+            "hybrid": 0.2878,
+            "relevant": false,
+            "matchedTerms": [
+              "青盾"
+            ]
+          }
+        ],
+        "rerank": {
+          "ids": [],
+          "fallback": false,
+          "reason": "所有片段均为产品需求、功能设计或法规条款，未包含青盾 iOS 正式版发布时间或 App Store 下载链接信息",
+          "usage": {
+            "input": 4,
+            "output": 73
+          },
+          "latencyMs": 3839.5413,
+          "raw": "```json\n{\"relevant\":[],\"reason\":\"所有片段均为产品需求、功能设计或法规条款，未包含青盾 iOS 正式版发布时间或 App Store 下载链接信息\"}\n```"
+        },
+        "gate": {
+          "queryTokens": [
+            "青盾",
+            "盾",
+            "ios",
+            "正式",
+            "式版",
+            "版什",
+            "么时",
+            "时候",
+            "候发",
+            "发布",
+            "布",
+            "app",
+            "store",
+            "下载",
+            "载链",
+            "链接",
+            "接是",
+            "是什",
+            "么"
+          ],
+          "realQueryTokens": [
+            "青盾",
+            "ios",
+            "正式",
+            "式版",
+            "版什",
+            "么时",
+            "时候",
+            "候发",
+            "发布",
+            "app",
+            "store",
+            "下载",
+            "载链",
+            "链接",
+            "接是",
+            "是什"
+          ],
+          "candidates": 8,
+          "accepted": 3,
+          "acceptedStrong": 3,
+          "minCoverageIdf": 0.3,
+          "minKeywordOverlap": 2,
+          "insufficient": false,
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "Q8",
+      "type": "含义不清",
+      "question": "哪些内容属于“可能影响未成年人身心健康的信息”？有没有可以直接照用的清单？",
+      "expect": {
+        "mustCover": [
+          "《未成年人网络保护条例》第二十三条给出定义与示例方向",
+          "具体种类、范围、判断标准和提示办法由网信部门会同有关部门确定",
+          "现有资料未给出这份清单",
+          "实务上需要做分类枚举并保留人工确认"
+        ],
+        "sourceHint": "K2-C 网络信息内容规范 + K5-C 异常与降级",
+        "rule": "指出“授权有关部门另行确定、资料中没有现成清单”并给出可操作替代记“完全正确”；只复述定义未说明清单缺失记“部分正确”；自行编造一份“官方清单”记“错误”。"
+      },
+      "direct": {
+        "ok": true,
+        "answer": "**结论：**\n\"可能影响未成年人身心健康的信息\"在中国法律中有明确类别，主要包括渲染暴力血腥、宣扬不良价值观、诱导危险行为、含有性暗示等内容。没有单一的官方\"清单\"，但《未成年人保护法》《网络信息内容生态治理规定》等法规中列举了具体类型。\n\n**依据：**\n- 暴力恐怖类：展示血腥场面、教唆犯罪、渲染校园霸凌\n- 色情低俗类：性暗示、裸露、不当交友信息\n- 价值观扭曲类：炫富拜金、畸形审美（如过度节食）、诋毁英烈\n- 危险行为类：诱导自残自杀、危险挑战、网络沉迷\n- 隐私侵害类：泄露或买卖未成年人个人信息\n- 其他类：封建迷信、赌博教唆、烟酒诱导等\n\n**来源：**\n依据模型内部知识（基于《中华人民共和国未成年人保护法》第五十条、《网络信息内容生态治理规定》第六条等相关条款的理解），未核实最新原文。建议核对2020年修订的《未成年人保护法》及配套实施细则以确认当前有效版本。",
+        "code": null,
+        "message": null,
+        "usage": {
+          "input": 330,
+          "output": 780,
+          "total": 1110,
+          "calls": 1
+        },
+        "latencyMs": {
+          "retrieve": 0,
+          "rerank": 0,
+          "generate": 14642,
+          "total": 14642
+        },
+        "promptChars": 354
+      },
+      "rag": {
+        "ok": true,
+        "answer": "**结论：**\n资料给出了大类举例（引发模仿不安全行为、违反社会公德、产生极端情绪、养成不良嗜好等），但明确提到具体种类、范围、判断标准需由国家网信部门等多部门确定，本资料库未收录该清单。\n\n**依据：**\n- [K2-C03] 第二十三条列举了\"可能引发或者诱导未成年人模仿不安全行为、实施违反社会公德行为、产生极端情绪、养成不良嗜好等\"作为可能影响身心健康的信息类型\n- [K2-C03] 第二十三条第二款规定，国家网信部门会同相关部门确定具体种类、范围、判断标准和提示办法\n- [K1-C11] 第3点重申不得呈现上述类型的信息\n\n**来源：**\nK2-C03《未成年人网络保护条例（相关条款节选）》、K1-C11《移动互联网未成年人模式建设指南》",
+        "code": null,
+        "message": null,
+        "insufficient": false,
+        "usage": {
+          "input": 4,
+          "output": 830,
+          "total": 834,
+          "calls": 2
+        },
+        "latencyMs": {
+          "retrieve": 0,
+          "rerank": 3995,
+          "generate": 11847,
+          "total": 15842
+        },
+        "promptChars": 1890,
+        "contextChars": 1352,
+        "citations": {
+          "cited": [
+            "K2-C03",
+            "K1-C11"
+          ],
+          "invalid": [],
+          "usedProvided": [
+            "K2-C03",
+            "K1-C11"
+          ],
+          "hasCitation": true,
+          "checkable": true
+        },
+        "retrieved": [
+          {
+            "chunkId": "K2-C03",
+            "hybrid": 0.6421,
+            "cosine": 0.0553,
+            "bm25norm": 0.9581,
+            "overlap": 2,
+            "section": "网络信息内容规范",
+            "docTitle": "未成年人网络保护条例（相关条款节选）"
+          },
+          {
+            "chunkId": "K1-C04",
+            "hybrid": 0.5162,
+            "cosine": 0.0469,
+            "bm25norm": 0.7689,
+            "overlap": 2,
+            "section": "三、通用规范 › （二）便捷使用",
+            "docTitle": "移动互联网未成年人模式建设指南"
+          },
+          {
+            "chunkId": "K1-C11",
+            "hybrid": 0.5579,
+            "cosine": 0.0408,
+            "bm25norm": 0.8364,
+            "overlap": 2,
+            "section": "五、移动互联网应用程序未成年人模式要求 › （二）强化内容安全",
+            "docTitle": "移动互联网未成年人模式建设指南"
+          }
+        ],
+        "candidates": [
+          {
+            "chunkId": "K5-C02",
+            "rank": 1,
+            "hybrid": 0.6704,
+            "relevant": true,
+            "matchedTerms": [
+              "直接",
+              "内容"
+            ]
+          },
+          {
+            "chunkId": "K2-C01",
+            "rank": 2,
+            "hybrid": 0.6651,
+            "relevant": true,
+            "matchedTerms": [
+              "可能影响未成年人身心健康的信息",
+              "用的"
+            ]
+          },
+          {
+            "chunkId": "K2-C03",
+            "rank": 3,
+            "hybrid": 0.6421,
+            "relevant": true,
+            "matchedTerms": [
+              "可能影响未成年人身心健康的信息",
+              "内容"
+            ]
+          },
+          {
+            "chunkId": "K1-C11",
+            "rank": 4,
+            "hybrid": 0.5579,
+            "relevant": true,
+            "matchedTerms": [
+              "可能影响未成年人身心健康的信息",
+              "内容"
+            ]
+          },
+          {
+            "chunkId": "K1-C04",
+            "rank": 5,
+            "hybrid": 0.5162,
+            "relevant": true,
+            "matchedTerms": [
+              "可能影响未成年人身心健康的信息",
+              "内容"
+            ]
+          },
+          {
+            "chunkId": "K1-C13",
+            "rank": 6,
+            "hybrid": 0.5006,
+            "relevant": true,
+            "matchedTerms": [
+              "用的",
+              "内容"
+            ]
+          },
+          {
+            "chunkId": "K5-C03",
+            "rank": 7,
+            "hybrid": 0.4498,
+            "relevant": true,
+            "matchedTerms": [
+              "用的",
+              "内容"
+            ]
+          },
+          {
+            "chunkId": "K3-C01",
+            "rank": 8,
+            "hybrid": 0.4379,
+            "relevant": false,
+            "matchedTerms": [
+              "直接"
+            ]
+          }
+        ],
+        "rerank": {
+          "ids": [
+            "K2-C03",
+            "K1-C04",
+            "K1-C11"
+          ],
+          "fallback": false,
+          "reason": "片段3直接列举了危害未成年人身心健康的具体内容类型清单，片段4和5也明确提到相关内容规范要求",
+          "usage": {
+            "input": 4,
+            "output": 107
+          },
+          "latencyMs": 3990.2052,
+          "raw": "```json\n{\"relevant\":[{\"no\":3,\"score\":0.95},{\"no\":4,\"score\":0.75},{\"no\":5,\"score\":0.85}],\"reason\":\"片段3直接列举了危害未成年人身心健康的具体内容类型清单，片段4和5也明确提到相关内容规范要求\"}\n```"
+        },
+        "gate": {
+          "queryTokens": [
+            "些内",
+            "内容",
+            "容属",
+            "属于",
+            "于",
+            "可能影响未成年人身心健康的信息",
+            "有没",
+            "没有",
+            "以直",
+            "直接",
+            "接照",
+            "照用",
+            "用的",
+            "的清",
+            "清单",
+            "单"
+          ],
+          "realQueryTokens": [
+            "些内",
+            "内容",
+            "容属",
+            "属于",
+            "可能影响未成年人身心健康的信息",
+            "有没",
+            "没有",
+            "以直",
+            "直接",
+            "接照",
+            "照用",
+            "用的",
+            "的清",
+            "清单"
+          ],
+          "candidates": 8,
+          "accepted": 7,
+          "acceptedStrong": 7,
+          "minCoverageIdf": 0.3,
+          "minKeywordOverlap": 2,
+          "insufficient": false,
+          "reason": null
+        }
+      }
+    }
+  ]
+}
