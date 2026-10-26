@@ -516,7 +516,8 @@ node src/cli.mjs report           # 7. 合并人工判断输出对比表
 ### 3.3 提交记录
 
 - 仓库：https://github.com/yet-yet/ai-env-experiment
-- 本次提交内容：`rag/`（知识库、模块、测试、运行记录）、`scripts/exp5/`（绘图脚本）、`素材/E5-*.png`、本报告（`.md`/`.docx`/`.pdf`）。
+- 本次提交：`49dd1d3`（`feat: implement experiment 5 LLM/context/RAG chain with knowledge base, hybrid retrieval and two-group comparison`），已推送到 `main`。
+- 提交内容：`rag/`（知识库、模块、测试、运行记录，共 79 个文件）、`scripts/exp5/`（绘图脚本）、`scripts/build-report5-*.mjs`（报告构建）、`素材/E5-*.png`、本报告（`.md`/`.docx`/`.pdf`）。
 - `.env.local` 与任何密钥**不在仓库内**（`.gitignore` 已忽略 `.env.*`，仅保留 `.env.example`）。
 
 ## 4. 实验小结
